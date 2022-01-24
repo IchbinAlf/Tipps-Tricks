@@ -1,0 +1,33 @@
+---Virtual Environments [VE] in Python---
+
+Python-VE Speicherort:
+C:\Users\fschneider\pyproj
+
+Python-Versions Speicherort:
+C:\Users\fschneider\pyver
+
+Vorgehen:
+
+1.		In PowerShell zu Python-VE Ordner navigieren
+2.		C:\Users\fschneider\pyver\py3100\python -m vemv *VE-Name*		Erstellt ein neues VE - WICHTIG! Mit dem Pfad muss auf die aktuelle Python-Version verwiesen werden.
+3.		tree .\*VE-Name*\							VE-Baum anzeigen lassen.
+4.		.\*VE-Name*\Scripts\activate.				VE starten
+5.		Vor PowerShell-Pfad ist nun der VE-Name sichtbar (*VE-Name*)
+6.		deactivate									VE wird deaktiviert und VE-Name ist nicht  mehr sichtbar
+
+
+---Python-Script in .exe konvertieren---
+
+Folgendes muss bereits auf dem PC installiert sein:
+	- pip
+	- pyinstaller
+
+Vorgehen:
+
+1.		In PowerShell zum Pfad der .py-Datein navigieren
+2.		pyinstaller --onefile *Script-Name*			Python-Script konvertieren
+		Tipp: mit den Flag -w kann die Konsole für die .exe deaktiviert werden.
+3.		Im Pfad wurden folgende Ordner erstellt: build & dist. Die .exe befindet sich im dist-Ordner
+4.		Damit .exe einfacher ausführbar ist, eine Verknüpfung auf den Desktop erstellen.
+
+
